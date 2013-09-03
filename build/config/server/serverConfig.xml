@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<server_configuration>
+
+Server Mode 0=Debug; 1=Release; 2=Test;
+<server_Mode>0</server_Mode>
+
+Max Level
+<level_Cap>60</level_Cap>
+Server Rates
+<server_Rates>1</server_Rates>
+Welcome Message
+<welcome_Message>Welcome to Tera-Project_S1 - development server!!!</welcome_Message>
+
+</server_configuration>

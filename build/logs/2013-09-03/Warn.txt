@@ -1,0 +1,160 @@
+05:01:28.8711 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:02:47.3178 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:05:59.0749 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 70.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:06:51.0320 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 19.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:07:27.1912 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 19.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:09:19.8849 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 19.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:11:21.3501 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:23:59.3985 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:30:54.8154 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:32:40.8857 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:36:48.8856 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:37:40.1106 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:39:25.5189 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+05:41:11.2433 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 17.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+07:54:47.0184 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 18.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+07:58:53.6042 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 18.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+08:04:47.3664 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 18.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+08:07:28.2031 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 18.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+08:08:57.9476 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 18.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.
+08:10:54.7130 | ARecvPacket
+EXCEPTION OCCURRED
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Tera.Services.PlayerService.OnAuthorized(Account account) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\PlayerService.cs:Zeile 68.
+   bei Tera.Services.AccountService.Authorized(IConnection connection, String accountName) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Services\AccountService.cs:Zeile 18.
+   bei Communication.Logic.AccountLogic.TryAuthorize(IConnection connection, String accountName, String session) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\AccountLogic.cs:Zeile 16.
+   bei Network.Client.RpAuth.Process() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\Client\RpAuth.cs:Zeile 24.
+   bei Network.ARecvPacket.Process(Connection connection) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Network\ARecvPacket.cs:Zeile 25.

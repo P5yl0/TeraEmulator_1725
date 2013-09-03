@@ -1,0 +1,26 @@
+#####################
+Admin Commands:
+-additem
+-addskill
+-addgold
+-speed
+-setlevel
+-jumpto
+-notice
+-systemnote
+-reload
+-spawn
+-checkgeo
+-quest
+-craft
+-goto
+-npc
+-camp
+-mount
+-viewmember
+-script
+-test
+
+#####################
+##  User Commands:
+-unstuck

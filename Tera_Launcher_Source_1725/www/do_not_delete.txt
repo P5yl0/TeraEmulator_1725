@@ -1,0 +1,4 @@
+tera revision 1725
+auth
+register
+serverlist

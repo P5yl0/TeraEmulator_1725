@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6F14729-BFA4-4F19-A051-480A4471D7AC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameServer</RootNamespace>
+    <AssemblyName>GameServer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Tera.GameServer</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionEngine\DuelAction.cs" />
+    <Compile Include="ActionEngine\GuildAction.cs" />
+    <Compile Include="ActionEngine\GuildInviteAction.cs" />
+    <Compile Include="ActionEngine\PartyAction.cs" />
+    <Compile Include="ActionEngine\RequestAction.cs" />
+    <Compile Include="ActionEngine\TradeAction.cs" />
+    <Compile Include="AdminEngine\AdminCommands\AddGold.cs" />
+    <Compile Include="AdminEngine\AdminCommands\AddItem.cs" />
+    <Compile Include="AdminEngine\AdminCommands\AddSkill.cs" />
+    <Compile Include="AdminEngine\AdminCommands\CampfireInfo.cs" />
+    <Compile Include="AdminEngine\AdminCommands\CheckGeo.cs" />
+    <Compile Include="AdminEngine\AdminCommands\Craft.cs" />
+    <Compile Include="AdminEngine\AdminCommands\GoTo.cs" />
+    <Compile Include="AdminEngine\AdminCommands\JumpTo.cs" />
+    <Compile Include="AdminEngine\AdminCommands\Mount.cs" />
+    <Compile Include="AdminEngine\AdminCommands\Notice.cs" />
+    <Compile Include="AdminEngine\AdminCommands\NpcCommand.cs" />
+    <Compile Include="AdminEngine\AdminCommands\Quest.cs" />
+    <Compile Include="AdminEngine\AdminCommands\Reload.cs" />
+    <Compile Include="AdminEngine\AdminCommands\Script.cs" />
+    <Compile Include="AdminEngine\AdminCommands\SetLevel.cs" />
+    <Compile Include="AdminEngine\AdminCommands\Spawn.cs" />
+    <Compile Include="AdminEngine\AdminCommands\Speed.cs" />
+    <Compile Include="AdminEngine\AdminCommands\SystemNote.cs" />
+    <Compile Include="AdminEngine\AdminCommands\Test.cs" />
+    <Compile Include="AdminEngine\AdminCommands\Unstuck.cs" />
+    <Compile Include="AdminEngine\AdminCommands\ViewMember.cs" />
+    <Compile Include="AdminEngine\AdminEngine.cs" />
+    <Compile Include="AdminEngine\Script.cs" />
+    <Compile Include="AdminEngine\ACommand.cs" />
+    <Compile Include="AdminEngine\WaitMessageHandle.cs" />
+    <Compile Include="AiEngine\DefaultAi.cs" />
+    <Compile Include="AiEngine\GatherAi.cs" />
+    <Compile Include="AiEngine\NpcAi.cs" />
+    <Compile Include="AiEngine\PlayerAi.cs" />
+    <Compile Include="AiEngine\ProjectileAi.cs" />
+    <Compile Include="Communication\Global.cs" />
+    <Compile Include="Communication\Interfaces\IAccountService.cs" />
+    <Compile Include="Communication\Interfaces\IActionEngine.cs" />
+    <Compile Include="Communication\Interfaces\IAdminEngine.cs" />
+    <Compile Include="Communication\Interfaces\IAiService.cs" />
+    <Compile Include="Communication\Interfaces\IAreaService.cs" />
+    <Compile Include="Communication\Interfaces\IChatService.cs" />
+    <Compile Include="Communication\Interfaces\IComponent.cs" />
+    <Compile Include="Communication\Interfaces\IControllerService.cs" />
+    <Compile Include="Communication\Interfaces\ICraftLearnService.cs" />
+    <Compile Include="Communication\Interfaces\ICraftService.cs" />
+    <Compile Include="Communication\Interfaces\IDuelService.cs" />
+    <Compile Include="Communication\Interfaces\IEmotionService.cs" />
+    <Compile Include="Communication\Interfaces\IFeedbackService.cs" />
+    <Compile Include="Communication\Interfaces\IGeoService.cs" />
+    <Compile Include="Communication\Interfaces\IGuildService.cs" />
+    <Compile Include="Communication\Interfaces\IItemService.cs" />
+    <Compile Include="Communication\Interfaces\IMapService.cs" />
+    <Compile Include="Communication\Interfaces\IMountService.cs" />
+    <Compile Include="Communication\Interfaces\IObserverService.cs" />
+    <Compile Include="Communication\Interfaces\IPartyService.cs" />
+    <Compile Include="Communication\Interfaces\IPlayerService.cs" />
+    <Compile Include="Communication\Interfaces\IQuestEngine.cs" />
+    <Compile Include="Communication\Interfaces\IRelationService.cs" />
+    <Compile Include="Communication\Interfaces\ISkillEngine.cs" />
+    <Compile Include="Communication\Interfaces\ISkillsLearnService.cs" />
+    <Compile Include="Communication\Interfaces\IStatsService.cs" />
+    <Compile Include="Communication\Interfaces\IStorageService.cs" />
+    <Compile Include="Communication\Interfaces\ITeleportService.cs" />
+    <Compile Include="Communication\Interfaces\ITradeService.cs" />
+    <Compile Include="Communication\Interfaces\IVisibleService.cs" />
+    <Compile Include="Communication\Logic\AccountLogic.cs" />
+    <Compile Include="Communication\Logic\AiLogic.cs" />
+    <Compile Include="Communication\Logic\CreatureLogic.cs" />
+    <Compile Include="Communication\Logic\GlobalLogic.cs" />
+    <Compile Include="Communication\Logic\PlayerLogic.cs" />
+    <Compile Include="Configuration\Configuration.cs" />
+    <Compile Include="Data\DAO\DAOManager.cs" />
+    <Compile Include="Controllers\BattleController.cs" />
+    <Compile Include="Controllers\CraftController.cs" />
+    <Compile Include="Controllers\DeathController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\DialogController.cs" />
+    <Compile Include="Controllers\FlyController.cs" />
+    <Compile Include="Controllers\GatherableController.cs" />
+    <Compile Include="Controllers\NpcBattleController.cs" />
+    <Compile Include="Controllers\NpcMoveController.cs" />
+    <Compile Include="Controllers\PlayerTradeController.cs" />
+    <Compile Include="Controllers\TradeController.cs" />
+    <Compile Include="Crypt\Cryptor.cs" />
+    <Compile Include="Crypt\CryptorKey.cs" />
+    <Compile Include="Crypt\Session.cs" />
+    <Compile Include="Crypt\Sha.cs" />
+    <Compile Include="Crypt\Utils.cs" />
+    <Compile Include="Data\Cache.cs" />
+    <Compile Include="Data\DAO\AccountDAO.cs" />
+    <Compile Include="Data\DAO\GuildDAO.cs" />
+    <Compile Include="Data\DAO\InventoryDAO.cs" />
+    <Compile Include="Data\DAO\PlayerDAO.cs" />
+    <Compile Include="Data\DAO\QuestDAO.cs" />
+    <Compile Include="Data\DAO\SkillsDAO.cs" />
+    <Compile Include="Data\Data.cs" />
+    <Compile Include="Data\Enums\AttackStatus.cs" />
+    <Compile Include="Data\Enums\AttackType.cs" />
+    <Compile Include="Data\Enums\ChatType.cs" />
+    <Compile Include="Data\Enums\CheckNameResult.cs" />
+    <Compile Include="Data\Enums\Craft\CraftStat.cs" />
+    <Compile Include="Data\Enums\CreatureState.cs" />
+    <Compile Include="Data\Enums\DamageType.cs" />
+    <Compile Include="Data\Enums\DialogIcon.cs" />
+    <Compile Include="Data\Enums\DialogNpcString.cs" />
+    <Compile Include="Data\Enums\DialogQuestString.cs" />
+    <Compile Include="Data\Enums\EffectType.cs" />
+    <Compile Include="Data\Enums\Gather\ResourceType.cs" />
+    <Compile Include="Data\Enums\Gather\TypeName.cs" />
+    <Compile Include="Data\Enums\Gender.cs" />
+    <Compile Include="Data\Enums\ItemDressSlot.cs" />
+    <Compile Include="Data\Enums\ItemEffectType.cs" />
+    <Compile Include="Data\Enums\ItemKind.cs" />
+    <Compile Include="Data\Enums\ItemObtain.cs" />
+    <Compile Include="Data\Enums\ItemQuality.cs" />
+    <Compile Include="Data\Enums\ItemType.cs" />
+    <Compile Include="Data\Enums\Item\CombatItemType.cs" />
+    <Compile Include="Data\Enums\Item\ItemCategory.cs" />
+    <Compile Include="Data\Enums\Item\ItemResourseType.cs" />
+    <Compile Include="Data\Enums\Item\RequiredEquipmentType.cs" />
+    <Compile Include="Data\Enums\Item\StorageType.cs" />
+    <Compile Include="Data\Enums\MovementDirection.cs" />
+    <Compile Include="Data\Enums\NpcRace.cs" />
+    <Compile Include="Data\Enums\NpcSize.cs" />
+    <Compile Include="Data\Enums\NpcTitle.cs" />
+    <Compile Include="Data\Enums\ObjectFamily.cs" />
+    <Compile Include="Data\Enums\Party\PartyMember.cs" />
+    <Compile Include="Data\Enums\Pegasus\PType.cs" />
+    <Compile Include="Data\Enums\PetName.cs" />
+    <Compile Include="Data\Enums\PlayerClass.cs" />
+    <Compile Include="Data\Enums\PlayerEmotion.cs" />
+    <Compile Include="Data\Enums\PlayerMode.cs" />
+    <Compile Include="Data\Enums\Player\PlayerMoveType.cs" />
+    <Compile Include="Data\Enums\Player\PlayerRelation.cs" />
+    <Compile Include="Data\Enums\QuestStatus.cs" />
+    <Compile Include="Data\Enums\QuestStatusIcon.cs" />
+    <Compile Include="Data\Enums\QuestStepType.cs" />
+    <Compile Include="Data\Enums\QuestType.cs" />
+    <Compile Include="Data\Enums\Race.cs" />
+    <Compile Include="Data\Enums\ReportType.cs" />
+    <Compile Include="Data\Enums\RequestType.cs" />
+    <Compile Include="Data\Enums\SkillEngine\AbnormalityShowType.cs" />
+    <Compile Include="Data\Enums\SkillEngine\PushTarget.cs" />
+    <Compile Include="Data\Enums\SkillEngine\SkillType.cs" />
+    <Compile Include="Data\Enums\SkillEngine\TargetingAreaType.cs" />
+    <Compile Include="Data\Enums\SkillEngine\TargetingMethod.cs" />
+    <Compile Include="Data\Enums\SkillEngine\TargetingType.cs" />
+    <Compile Include="Data\Enums\SystemWindow.cs" />
+    <Compile Include="Data\Enums\VisualEffectType.cs" />
+    <Compile Include="Data\Interfaces\IAi.cs" />
+    <Compile Include="Data\Interfaces\IConnection.cs" />
+    <Compile Include="Data\Interfaces\IController.cs" />
+    <Compile Include="Data\Interfaces\IEffect.cs" />
+    <Compile Include="Data\Interfaces\IQuestStep.cs" />
+    <Compile Include="Data\Interfaces\IRecvPacket.cs" />
+    <Compile Include="Data\Interfaces\ISendPacket.cs" />
+    <Compile Include="Data\Interfaces\IVisible.cs" />
+    <Compile Include="Data\Structures\Account\Account.cs" />
+    <Compile Include="Data\Structures\Craft\Recipe.cs" />
+    <Compile Include="Data\Structures\Creature\Creature.cs" />
+    <Compile Include="Data\Structures\Creature\CreatureBaseStats.cs" />
+    <Compile Include="Data\Structures\Creature\CreatureEffectsImpact.cs" />
+    <Compile Include="Data\Structures\Creature\CreatureLifeStats.cs" />
+    <Compile Include="Data\Structures\Gather\Gather.cs" />
+    <Compile Include="Data\Structures\Geometry\Geom.cs" />
+    <Compile Include="Data\Structures\Geometry\Point3D.cs" />
+    <Compile Include="Data\Structures\Geometry\Polygon.cs" />
+    <Compile Include="Data\Structures\Guild\Guild.cs" />
+    <Compile Include="Data\Structures\Guild\GuildHistoryStrings.cs" />
+    <Compile Include="Data\Structures\Guild\GuildMemberRank.cs" />
+    <Compile Include="Data\Structures\Guild\GuildMemberRankPrivileges.cs" />
+    <Compile Include="Data\Structures\Guild\HistoryEvent.cs" />
+    <Compile Include="Data\Structures\Npc\Npc.cs" />
+    <Compile Include="Data\Structures\Npc\NpcShape.cs" />
+    <Compile Include="Data\Structures\Objects\Projectile.cs" />
+    <Compile Include="Data\Structures\Player\AchevesStats.cs" />
+    <Compile Include="Data\Structures\Player\Player.cs" />
+    <Compile Include="Data\Structures\Player\PlayerCraftStats.cs" />
+    <Compile Include="Data\Structures\Player\PlayerData.cs" />
+    <Compile Include="Data\Structures\Player\RaceGenderClass.cs" />
+    <Compile Include="Data\Structures\Player\Storage.cs" />
+    <Compile Include="Data\Structures\Player\StorageItem.cs" />
+    <Compile Include="Data\Structures\Player\UseSkillArgs.cs" />
+    <Compile Include="Data\Structures\Quest\Enums\QuestNpcIcon.cs" />
+    <Compile Include="Data\Structures\Quest\Enums\QuestRewardType.cs" />
+    <Compile Include="Data\Structures\Quest\Quest.cs" />
+    <Compile Include="Data\Structures\Quest\QuestData.cs" />
+    <Compile Include="Data\Structures\Quest\QuestReward.cs" />
+    <Compile Include="Data\Structures\Quest\QuestStep.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskAcquisitionHunt.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskConditions.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskDeliveItems.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskEscort.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskGather.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskGeomeunteum.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskGroupHunting.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskGuard.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskHunting.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskHuntingDelivery.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskItemThatStabbedPassed.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskItemUse.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskMovePC.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskNotImpliment.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskObjectAction.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskOverTheState.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskPlaybackVideo.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskQuarter.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskRepeat.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskSkillStrike.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskTeleport.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskVisit.cs" />
+    <Compile Include="Data\Structures\Quest\Tasks\QTaskVisitTheBlackCrack.cs" />
+    <Compile Include="Data\Structures\SkillEngine\Abnormality.cs" />
+    <Compile Include="Data\Structures\SkillEngine\AbnormalityEffect.cs" />
+    <Compile Include="Data\Structures\SkillEngine\ActionStage.cs" />
+    <Compile Include="Data\Structures\SkillEngine\Animation.cs" />
+    <Compile Include="Data\Structures\SkillEngine\AnimSeq.cs" />
+    <Compile Include="Data\Structures\SkillEngine\AreaEffect.cs" />
+    <Compile Include="Data\Structures\SkillEngine\Attack.cs" />
+    <Compile Include="Data\Structures\SkillEngine\ChargeStage.cs" />
+    <Compile Include="Data\Structures\SkillEngine\ChargingStageList.cs" />
+    <Compile Include="Data\Structures\SkillEngine\Cost.cs" />
+    <Compile Include="Data\Structures\SkillEngine\DefaultSkillSet.cs" />
+    <Compile Include="Data\Structures\SkillEngine\Precondition.cs" />
+    <Compile Include="Data\Structures\SkillEngine\ProjectileData.cs" />
+    <Compile Include="Data\Structures\SkillEngine\ProjectileSkill.cs" />
+    <Compile Include="Data\Structures\SkillEngine\Skill.cs" />
+    <Compile Include="Data\Structures\SkillEngine\SkillAction.cs" />
+    <Compile Include="Data\Structures\SkillEngine\Targeting.cs" />
+    <Compile Include="Data\Structures\SkillEngine\TargetingArea.cs" />
+    <Compile Include="Data\Structures\SkillEngine\UserSkill.cs" />
+    <Compile Include="Data\Structures\Statistical.cs" />
+    <Compile Include="Data\Structures\Template\CampfireSpawnTemplate.cs" />
+    <Compile Include="Data\Structures\Template\GatherSpawnTemplate.cs" />
+    <Compile Include="Data\Structures\Template\GatherTemplate.cs" />
+    <Compile Include="Data\Structures\Template\Gather\GSpawnTemplate.cs" />
+    <Compile Include="Data\Structures\Template\Item\CategorieStats\ChangeColorItem.cs" />
+    <Compile Include="Data\Structures\Template\Item\CategorieStats\EquipmentStat.cs" />
+    <Compile Include="Data\Structures\Template\Item\CategorieStats\IDefaultCategorieStat.cs" />
+    <Compile Include="Data\Structures\Template\Item\CategorieStats\SkillStat.cs" />
+    <Compile Include="Data\Structures\Template\Item\ItemTemplate.cs" />
+    <Compile Include="Data\Structures\Template\Item\Passivity.cs" />
+    <Compile Include="Data\Structures\Template\NpcTemplate.cs" />
+    <Compile Include="Data\Structures\Template\SpawnTemplate.cs" />
+    <Compile Include="Data\Structures\TeraObject.cs" />
+    <Compile Include="Data\Structures\Uid.cs" />
+    <Compile Include="Data\Structures\UidFactory.cs" />
+    <Compile Include="Data\Structures\World\Abnormal.cs" />
+    <Compile Include="Data\Structures\World\AttackResult.cs" />
+    <Compile Include="Data\Structures\World\Campfire.cs" />
+    <Compile Include="Data\Structures\World\Climb.cs" />
+    <Compile Include="Data\Structures\World\Continent\Area.cs" />
+    <Compile Include="Data\Structures\World\Continent\Continent.cs" />
+    <Compile Include="Data\Structures\World\Continent\Section.cs" />
+    <Compile Include="Data\Structures\World\Dialog.cs" />
+    <Compile Include="Data\Structures\World\DialogButton.cs" />
+    <Compile Include="Data\Structures\World\Duel.cs" />
+    <Compile Include="Data\Structures\World\FlyTeleport.cs" />
+    <Compile Include="Data\Structures\World\GeoLocation.cs" />
+    <Compile Include="Data\Structures\World\GeoPoint.cs" />
+    <Compile Include="Data\Structures\World\Item.cs" />
+    <Compile Include="Data\Structures\World\MapInstance.cs" />
+    <Compile Include="Data\Structures\World\Mount.cs" />
+    <Compile Include="Data\Structures\World\Party\Party.cs" />
+    <Compile Include="Data\Structures\World\Pegasus\FlyStep.cs" />
+    <Compile Include="Data\Structures\World\Pegasus\PegasusPath.cs" />
+    <Compile Include="Data\Structures\World\Pegasus\PPStage.cs" />
+    <Compile Include="Data\Structures\World\Requests\DuelInvite.cs" />
+    <Compile Include="Data\Structures\World\Requests\EmptyRequest.cs" />
+    <Compile Include="Data\Structures\World\Requests\Extract.cs" />
+    <Compile Include="Data\Structures\World\Requests\GuildCreate.cs" />
+    <Compile Include="Data\Structures\World\Requests\GuildInvite.cs" />
+    <Compile Include="Data\Structures\World\Requests\PartyInvite.cs" />
+    <Compile Include="Data\Structures\World\Requests\Request.cs" />
+    <Compile Include="Data\Structures\World\Requests\TradeStart.cs" />
+    <Compile Include="Data\Structures\World\ShoppingCart.cs" />
+    <Compile Include="Data\Structures\World\ShoppingItem.cs" />
+    <Compile Include="Data\Structures\World\Tradelist.cs" />
+    <Compile Include="Data\Structures\World\VisualEffect.cs" />
+    <Compile Include="Data\Structures\World\WorldPosition.cs" />
+    <Compile Include="DungeonEngine\DungeonEngine.cs" />
+    <Compile Include="DungeonEngine\Dungeons\ADungeon.cs" />
+    <Compile Include="DungeonEngine\Dungeons\IoDDungeon.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\MapInstanceExtensions.cs" />
+    <Compile Include="Extensions\ClassExtensions.cs" />
+    <Compile Include="GameServer.cs" />
+    <Compile Include="Network\ARecvPacket.cs" />
+    <Compile Include="Network\ASendPacket.cs" />
+    <Compile Include="Network\old_Client\RpAbortRelog.cs" />
+    <Compile Include="Network\old_Client\RpAddToExtract.cs" />
+    <Compile Include="Network\old_Client\RpAddToTrade.cs" />
+    <Compile Include="Network\old_Client\RpAttack.cs" />
+    <Compile Include="Network\Packets\ClientPackets\CpRequestAuth.cs" />
+    <Compile Include="Network\old_Client\RpCharacterEmotion.cs" />
+    <Compile Include="Network\old_Client\RpCharacterInspect.cs" />
+    <Compile Include="Network\old_Client\RpCharacterSettings1.cs" />
+    <Compile Include="Network\old_Client\RpChatBlock.cs" />
+    <Compile Include="Network\old_Client\RpChatInfo.cs" />
+    <Compile Include="Network\old_Client\RpChatMessage.cs" />
+    <Compile Include="Network\old_Client\RpChatPrivate.cs" />
+    <Compile Include="Network\Packets\ClientPackets\CpCheckName.cs" />
+    <Compile Include="Network\Packets\ClientPackets\CpCheckNameForUse.cs" />
+    <Compile Include="Network\Packets\ClientPackets\CpRequestVersion.cs" />
+    <Compile Include="Network\old_Client\RpClimb.cs" />
+    <Compile Include="Network\old_Client\RpClimbEnd.cs" />
+    <Compile Include="Network\old_Client\RpClimbUp.cs" />
+    <Compile Include="Network\old_Client\RpCompleteTraid.cs" />
+    <Compile Include="Network\old_Client\RpCraftStart.cs" />
+    <Compile Include="Network\Packets\ClientPackets\CpCreateCharacter.cs" />
+    <Compile Include="Network\Packets\ClientPackets\CpDeleteCharacter.cs" />
+    <Compile Include="Network\old_Client\RpDialogCancelRelog.cs" />
+    <Compile Include="Network\old_Client\RpDialogSelect.cs" />
+    <Compile Include="Network\old_Client\RpDialogShow.cs" />
+    <Compile Include="Network\old_Client\RpEnterWorld.cs" />
+    <Compile Include="Network\old_Client\RpExit.cs" />
+    <Compile Include="Network\old_Client\RpExtractStart.cs" />
+    <Compile Include="Network\old_Client\RpFriendAdd.cs" />
+    <Compile Include="Network\old_Client\RpFriendRemove.cs" />
+    <Compile Include="Network\old_Client\RpGatherStart.cs" />
+    <Compile Include="Network\old_Client\RpGetBindPoint.cs" />
+    <Compile Include="Network\old_Client\RpGetCharacterEquipment.cs" />
+    <Compile Include="Network\old_Client\RpGetFriendList.cs" />
+    <Compile Include="Network\old_Client\RpGetInspectUID.cs" />
+    <Compile Include="Network\old_Client\RpGetInventory.cs" />
+    <Compile Include="Network\old_Client\RpGetItemInfo.cs" />
+    <Compile Include="Network\Packets\ClientPackets\CpRequestCharacterList.cs" />
+    <Compile Include="Network\old_Client\RpGetServerGuilds.cs" />
+    <Compile Include="Network\old_Client\RpGetSimpleItemInfo.cs" />
+    <Compile Include="Network\old_Client\RpGuildAddMemberRequest.cs" />
+    <Compile Include="Network\old_Client\RpGuildChangeAd.cs" />
+    <Compile Include="Network\old_Client\RpGuildChangeLeader.cs" />
+    <Compile Include="Network\old_Client\RpGuildChangeMemberRank.cs" />
+    <Compile Include="Network\old_Client\RpGuildChangeMotd.cs" />
+    <Compile Include="Network\old_Client\RpGuildChangeRankPrivileges.cs" />
+    <Compile Include="Network\old_Client\RpGuildChangeTitle.cs" />
+    <Compile Include="Network\old_Client\RpGuildGetHistory.cs" />
+    <Compile Include="Network\old_Client\RpGuildGetMemberList.cs" />
+    <Compile Include="Network\old_Client\RpGuildInvite.cs" />
+    <Compile Include="Network\old_Client\RpGuildMemberGuildPraise.cs" />
+    <Compile Include="Network\old_Client\RpGuildMemberLeave.cs" />
+    <Compile Include="Network\old_Client\RpGuildPraise.cs" />
+    <Compile Include="Network\old_Client\RpGuildRankAdd.cs" />
+    <Compile Include="Network\old_Client\RpGuildRemoveMember.cs" />
+    <Compile Include="Network\old_Client\RpInactive.cs" />
+    <Compile Include="Network\old_Client\RpInspectUnk.cs" />
+    <Compile Include="Network\old_Client\RpIntentoryDressItem.cs" />
+    <Compile Include="Network\old_Client\RpInteruptAction.cs" />
+    <Compile Include="Network\old_Client\RpInventoryRemoveItem.cs" />
+    <Compile Include="Network\old_Client\RpInventoryReplaceItem.cs" />
+    <Compile Include="Network\old_Client\RpInventoryUndressItem.cs" />
+    <Compile Include="Network\old_Client\RpItemPickUp.cs" />
+    <Compile Include="Network\old_Client\RpMarkTarget.cs" />
+    <Compile Include="Network\old_Client\RpMountUnkQuestion.cs" />
+    <Compile Include="Network\old_Client\RpMove.cs" />
+    <Compile Include="Network\old_Client\RpMoveToBind.cs" />
+    <Compile Include="Network\old_Client\RpOwnerCancelRequest.cs" />
+    <Compile Include="Network\old_Client\RpPartyDisband.cs" />
+    <Compile Include="Network\old_Client\RpPartyLeave.cs" />
+    <Compile Include="Network\old_Client\RpPartyPromoteMember.cs" />
+    <Compile Include="Network\old_Client\RpPartyRemoveMember.cs" />
+    <Compile Include="Network\old_Client\RpPartyVote.cs" />
+    <Compile Include="Network\old_Client\RpPlay.cs" />
+    <Compile Include="Network\old_Client\RpPlayerTradeAdd.cs" />
+    <Compile Include="Network\old_Client\RpPlayerTradeCancel.cs" />
+    <Compile Include="Network\old_Client\RpPlayerTradeLock.cs" />
+    <Compile Include="Network\old_Client\RpPlayerTradeRemoveItem.cs" />
+    <Compile Include="Network\old_Client\RpQuestRefuse.cs" />
+    <Compile Include="Network\old_Client\RpQuestTopSwitch.cs" />
+    <Compile Include="Network\old_Client\RpReleaseAttack.cs" />
+    <Compile Include="Network\old_Client\RpRelog.cs" />
+    <Compile Include="Network\old_Client\RpRemoveBuyTrade.cs" />
+    <Compile Include="Network\old_Client\RpRemoveSellTrade.cs" />
+    <Compile Include="Network\old_Client\RpRequestAccept.cs" />
+    <Compile Include="Network\old_Client\RpRequestCancel.cs" />
+    <Compile Include="Network\old_Client\RpRequestInviteProcess.cs" />
+    <Compile Include="Network\Packets\ClientPackets\CpRequestSystemInfo.cs" />
+    <Compile Include="Network\old_Client\RpRessurect.cs" />
+    <Compile Include="Network\old_Client\RpSellItem.cs" />
+    <Compile Include="Network\old_Client\RpServerGuildsPage.cs" />
+    <Compile Include="Network\old_Client\RpSkillBuy.cs" />
+    <Compile Include="Network\old_Client\RpStorageSort.cs" />
+    <Compile Include="Network\Packets\ClientPackets\CpSystemInfo.cs" />
+    <Compile Include="Network\old_Client\RpSystemRequest.cs" />
+    <Compile Include="Network\old_Client\RpTargetAttack.cs" />
+    <Compile Include="Network\old_Client\RpTeleportCharacter.cs" />
+    <Compile Include="Network\old_Client\RpTeleportUnk.cs" />
+    <Compile Include="Network\old_Client\RpTradeInterupt.cs" />
+    <Compile Include="Network\old_Client\RpUISettings.cs" />
+    <Compile Include="Network\old_Client\RpUnstuck.cs" />
+    <Compile Include="Network\old_Client\RpUseCrosstargetSkill.cs" />
+    <Compile Include="Network\old_Client\RpUseDelaySkill.cs" />
+    <Compile Include="Network\old_Client\RpUseItem.cs" />
+    <Compile Include="Network\old_Client\RpUseSkill.cs" />
+    <Compile Include="Network\old_Client\RpWarehouseAddItem.cs" />
+    <Compile Include="Network\old_Client\RpWarehouseAddItemToInventory.cs" />
+    <Compile Include="Network\old_Client\RpWarehouseChangeSection.cs" />
+    <Compile Include="Network\old_Client\RpWarehouseReplaceItem.cs" />
+    <Compile Include="Network\old_Client\RpZoneChange.cs" />
+    <Compile Include="Network\old_Client\RpZoneSwitchContinent.cs" />
+    <Compile Include="Network\old_Client\RpZoneUnk.cs" />
+    <Compile Include="Network\Connection.cs" />
+    <Compile Include="Network\Messages\GameMessage.cs" />
+    <Compile Include="Network\Messages\KeyMessage.cs" />
+    <Compile Include="Network\OpCodes.cs" />
+    <Compile Include="Network\Protocol\GameProtocol.cs" />
+    <Compile Include="Network\Protocol\KeyProtocol.cs" />
+    <Compile Include="Network\old_Server\SpAbnormal.cs" />
+    <Compile Include="Network\old_Server\SpAttack.cs" />
+    <Compile Include="Network\old_Server\SpAttackDestination.cs" />
+    <Compile Include="Network\old_Server\SpAttackEnd.cs" />
+    <Compile Include="Network\old_Server\SpAttackResult.cs" />
+    <Compile Include="Network\old_Server\SpAttackShowBlock.cs" />
+    <Compile Include="Network\old_Server\SpCampfire.cs" />
+    <Compile Include="Network\old_Server\SpCanSendRequest.cs" />
+    <Compile Include="Network\old_Server\SpCharacterBind.cs" />
+    <Compile Include="Network\old_Server\SpCharacterBuffs.cs" />
+    <Compile Include="Network\old_Server\SpCharacterCraftStats.cs" />
+    <Compile Include="Network\old_Server\SpCharacterDeath.cs" />
+    <Compile Include="Network\old_Server\SpCharacterEmotions.cs" />
+    <Compile Include="Network\old_Server\SpCharacterGatherstats.cs" />
+    <Compile Include="Network\old_Server\SpCharacterGuildInfo.cs" />
+    <Compile Include="Network\old_Server\SpCharacterInfo.cs" />
+    <Compile Include="Network\old_Server\SpCharacterInit.cs" />
+    <Compile Include="Network\old_Server\SpCharacterInspect.cs" />
+    <Compile Include="Network\Packets\ServerPackets\SpSendCharacterList.cs" />
+    <Compile Include="Network\old_Server\SpCharacterMove.cs" />
+    <Compile Include="Network\old_Server\SpCharacterPosition.cs" />
+    <Compile Include="Network\old_Server\SpCharacterRecipes.cs" />
+    <Compile Include="Network\old_Server\SpCharacterRelation.cs" />
+    <Compile Include="Network\old_Server\SpCharacterState.cs" />
+    <Compile Include="Network\old_Server\SpCharacterStats.cs" />
+    <Compile Include="Network\old_Server\SpCharacterThings.cs" />
+    <Compile Include="Network\old_Server\SpCharacterZoneData.cs" />
+    <Compile Include="Network\Packets\ServerPackets\SpCharacterCreateResult.cs" />
+    <Compile Include="Network\old_Server\SpChatInfo.cs" />
+    <Compile Include="Network\old_Server\SpChatMessage.cs" />
+    <Compile Include="Network\old_Server\SpChatPrivate.cs" />
+    <Compile Include="Network\Packets\ServerPackets\SpCheckNameResult.cs" />
+    <Compile Include="Network\Packets\ServerPackets\SpSendVersion.cs" />
+    <Compile Include="Network\old_Server\SpClimb.cs" />
+    <Compile Include="Network\old_Server\SpComplitedQuests.cs" />
+    <Compile Include="Network\old_Server\SpCraftInitBar.cs" />
+    <Compile Include="Network\old_Server\SpCraftProgress.cs" />
+    <Compile Include="Network\old_Server\SpCraftUpdateWindow.cs" />
+    <Compile Include="Network\old_Server\SpCraftWindow.cs" />
+    <Compile Include="Network\old_Server\SpCreatureMoveTo.cs" />
+    <Compile Include="Network\old_Server\SpDeathDialog.cs" />
+    <Compile Include="Network\Packets\ServerPackets\SpCharacterDelete.cs" />
+    <Compile Include="Network\old_Server\SpDirectionChange.cs" />
+    <Compile Include="Network\old_Server\SpDropInfo.cs" />
+    <Compile Include="Network\old_Server\SpDropPickup.cs" />
+    <Compile Include="Network\old_Server\SpDuelCounter.cs" />
+    <Compile Include="Network\old_Server\SpExit.cs" />
+    <Compile Include="Network\old_Server\SpExitWindow.cs" />
+    <Compile Include="Network\old_Server\SpExtractProgressbar.cs" />
+    <Compile Include="Network\old_Server\SpFlightPoints.cs" />
+    <Compile Include="Network\old_Server\SpForFun.cs" />
+    <Compile Include="Network\old_Server\SpFriendAdd.cs" />
+    <Compile Include="Network\old_Server\SpFriendList.cs" />
+    <Compile Include="Network\old_Server\SpFriendUpdate.cs" />
+    <Compile Include="Network\old_Server\SpGatherEnd.cs" />
+    <Compile Include="Network\old_Server\SpGatherInfo.cs" />
+    <Compile Include="Network\old_Server\SpGatherProgress.cs" />
+    <Compile Include="Network\old_Server\SpGatherStart.cs" />
+    <Compile Include="Network\old_Server\SpGuildHistory.cs" />
+    <Compile Include="Network\old_Server\SpGuildMemberList.cs" />
+    <Compile Include="Network\old_Server\SpGuildRanking.cs" />
+    <Compile Include="Network\old_Server\SpHelp.cs" />
+    <Compile Include="Network\old_Server\SpHideRequest.cs" />
+    <Compile Include="Network\old_Server\SpInspectUID.cs" />
+    <Compile Include="Network\old_Server\SpInspectUnk.cs" />
+    <Compile Include="Network\old_Server\SpInventory.cs" />
+    <Compile Include="Network\old_Server\SpItemCooldown.cs" />
+    <Compile Include="Network\old_Server\SpItemInfo.cs" />
+    <Compile Include="Network\old_Server\SpLevelUp.cs" />
+    <Compile Include="Network\old_Server\SpMarkTarget.cs" />
+    <Compile Include="Network\old_Server\SpMountHide.cs" />
+    <Compile Include="Network\old_Server\SpMountShow.cs" />
+    <Compile Include="Network\old_Server\SpMountUnkResponse.cs" />
+    <Compile Include="Network\old_Server\SpNpcEmotion.cs" />
+    <Compile Include="Network\old_Server\SpNpcHpMp.cs" />
+    <Compile Include="Network\old_Server\SpNpcHpWindow.cs" />
+    <Compile Include="Network\old_Server\SpNpcIcon.cs" />
+    <Compile Include="Network\old_Server\SpNpcInfo.cs" />
+    <Compile Include="Network\old_Server\SpNpcMove.cs" />
+    <Compile Include="Network\old_Server\SpNpcStatus.cs" />
+    <Compile Include="Network\old_Server\SpNpcTalk.cs" />
+    <Compile Include="Network\old_Server\SpPartyAbnormals.cs" />
+    <Compile Include="Network\old_Server\SpPartyLeave.cs" />
+    <Compile Include="Network\old_Server\SpPartyList.cs" />
+    <Compile Include="Network\old_Server\SpPartyMemberPosition.cs" />
+    <Compile Include="Network\old_Server\SpPartyRemoveMember.cs" />
+    <Compile Include="Network\old_Server\SpPartyStats.cs" />
+    <Compile Include="Network\old_Server\SpPartyVote.cs" />
+    <Compile Include="Network\old_Server\SpPegasusFinishFly.cs" />
+    <Compile Include="Network\old_Server\SpPegasusFlight.cs" />
+    <Compile Include="Network\old_Server\SpPegasusInfo.cs" />
+    <Compile Include="Network\old_Server\SpPlayerTradeHistory.cs" />
+    <Compile Include="Network\old_Server\SpProjectile.cs" />
+    <Compile Include="Network\old_Server\SpQuest.cs" />
+    <Compile Include="Network\old_Server\SpQuestAccept.cs" />
+    <Compile Include="Network\old_Server\SpQuestComplite.cs" />
+    <Compile Include="Network\old_Server\SpQuestMovie.cs" />
+    <Compile Include="Network\old_Server\SpRelog.cs" />
+    <Compile Include="Network\old_Server\SpRelogWindow.cs" />
+    <Compile Include="Network\old_Server\SpRemoveAbnormal.cs" />
+    <Compile Include="Network\old_Server\SpRemoveCampfire.cs" />
+    <Compile Include="Network\old_Server\SpRemoveCharacter.cs" />
+    <Compile Include="Network\old_Server\SpRemoveGather.cs" />
+    <Compile Include="Network\old_Server\SpRemoveHpBar.cs" />
+    <Compile Include="Network\old_Server\SpRemoveItem.cs" />
+    <Compile Include="Network\old_Server\SpRemoveNpc.cs" />
+    <Compile Include="Network\old_Server\SpRemoveProjectile.cs" />
+    <Compile Include="Network\old_Server\SpRequestInvite.cs" />
+    <Compile Include="Network\old_Server\SpServerGuilds.cs" />
+    <Compile Include="Network\old_Server\SpShowDialog.cs" />
+    <Compile Include="Network\old_Server\SpShowIcon.cs" />
+    <Compile Include="Network\old_Server\SpShowWindow.cs" />
+    <Compile Include="Network\old_Server\SpSimpleItemInfo.cs" />
+    <Compile Include="Network\old_Server\SpSkillCooldown.cs" />
+    <Compile Include="Network\old_Server\SpSkillList.cs" />
+    <Compile Include="Network\old_Server\SpSkillPurchased.cs" />
+    <Compile Include="Network\old_Server\SpSystemMessage.cs" />
+    <Compile Include="Network\old_Server\SpSystemNotice.cs" />
+    <Compile Include="Network\old_Server\SpSystemWindow.cs" />
+    <Compile Include="Network\old_Server\SendPacket.cs" />
+    <Compile Include="Network\old_Server\SpTradeHideWindow.cs" />
+    <Compile Include="Network\old_Server\SpTradeList.cs" />
+    <Compile Include="Network\old_Server\SpTradeWindow.cs" />
+    <Compile Include="Network\old_Server\SpTraidSkillList.cs" />
+    <Compile Include="Network\old_Server\SpUISettings.cs" />
+    <Compile Include="Network\old_Server\SpUpdateExp.cs" />
+    <Compile Include="Network\old_Server\SpUpdateGather.cs" />
+    <Compile Include="Network\old_Server\SpUpdateHp.cs" />
+    <Compile Include="Network\old_Server\SpUpdateMp.cs" />
+    <Compile Include="Network\old_Server\SpUpdateStamina.cs" />
+    <Compile Include="Network\old_Server\SpUpdateTrade.cs" />
+    <Compile Include="Network\old_Server\SpWarehouseItems.cs" />
+    <Compile Include="Network\old_Server\SpZoneUnkAnswer.cs" />
+    <Compile Include="Network\old_Server\SpZoneUnkAnswer2.cs" />
+    <Compile Include="Network\SystemMessages.cs" />
+    <Compile Include="Network\TcpServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestEngine\Steps\QStepCondition.cs" />
+    <Compile Include="QuestEngine\Steps\QStepItemThatStabbedPassed.cs" />
+    <Compile Include="QuestEngine\Steps\QStepMovePC.cs" />
+    <Compile Include="Services\CraftLearnService.cs" />
+    <Compile Include="Services\DuelService.cs" />
+    <Compile Include="Services\EmotionService.cs" />
+    <Compile Include="Services\GuildService.cs" />
+    <Compile Include="Services\MountService.cs" />
+    <Compile Include="Services\PartyService.cs" />
+    <Compile Include="QuestEngine\QuestEngine.cs" />
+    <Compile Include="QuestEngine\QuestProcessor.cs" />
+    <Compile Include="QuestEngine\Steps\QStepDefault.cs" />
+    <Compile Include="QuestEngine\Steps\QStepHunting.cs" />
+    <Compile Include="QuestEngine\Steps\QStepHuntingDelivery.cs" />
+    <Compile Include="QuestEngine\Steps\QStepPlayCinematic.cs" />
+    <Compile Include="QuestEngine\Steps\QStepVisit.cs" />
+    <Compile Include="ActionEngine\ActionEngine.cs" />
+    <Compile Include="Services\AiService.cs" />
+    <Compile Include="Services\AreaService.cs" />
+    <Compile Include="Services\CraftService.cs" />
+    <Compile Include="Services\GeoService.cs" />
+    <Compile Include="Services\ItemService.cs" />
+    <Compile Include="Services\ObserverService.cs" />
+    <Compile Include="Services\AccountService.cs" />
+    <Compile Include="Services\ChatService.cs" />
+    <Compile Include="Services\ControllerService.cs" />
+    <Compile Include="Services\FeedbackService.cs" />
+    <Compile Include="Services\StorageService.cs" />
+    <Compile Include="Services\MapService.cs" />
+    <Compile Include="Services\PlayerService.cs" />
+    <Compile Include="Services\RelationService.cs" />
+    <Compile Include="Services\SkillsLearnService.cs" />
+    <Compile Include="Services\StatsService.cs" />
+    <Compile Include="Services\TeleportService.cs" />
+    <Compile Include="Services\TradeService.cs" />
+    <Compile Include="Services\VisibleService.cs" />
+    <Compile Include="SkillEngine\AbnormalityProcessor.cs" />
+    <Compile Include="SkillEngine\EffectsProvider.cs" />
+    <Compile Include="SkillEngine\Effects\EfAttackSpeedInc.cs" />
+    <Compile Include="SkillEngine\Effects\EfDefault.cs" />
+    <Compile Include="SkillEngine\Effects\EfLoseHp.cs" />
+    <Compile Include="SkillEngine\Effects\EfRegenHp.cs" />
+    <Compile Include="SkillEngine\Effects\EfRegenMp.cs" />
+    <Compile Include="SkillEngine\Effects\EfSpeedInc.cs" />
+    <Compile Include="SkillEngine\PassivityProcessor.cs" />
+    <Compile Include="SkillEngine\Patches\ASkillPatch.cs" />
+    <Compile Include="SkillEngine\Patches\MysticPatch.cs" />
+    <Compile Include="SkillEngine\SkillEngine.cs" />
+    <Compile Include="SkillEngine\SeUtils.cs" />
+    <Compile Include="Structures\Visible.cs" />
+    <Compile Include="Utils\DelayedAction.cs" />
+    <Compile Include="Utils\Funcs.cs" />
+    <Compile Include="Utils\Log.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.3.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.480, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Scs, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Scs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

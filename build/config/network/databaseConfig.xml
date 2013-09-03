@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database_configuration>
+
+Database host
+<database_Host>127.0.0.1</database_Host>
+
+Database port
+<database_Port>3306</database_Port>
+
+Database user
+<database_User>root</database_User>
+
+Database password
+<database_Pass>PASSWORD</database_Pass>
+
+Database name
+<database_Name>tera</database_Name>
+
+</database_configuration>

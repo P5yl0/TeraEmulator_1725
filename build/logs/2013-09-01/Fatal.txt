@@ -1,0 +1,113 @@
+01:52:12.3508 | Can't start server!
+EXCEPTION OCCURRED
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at MySql.Data.Common.StreamCreator.CreateSocketStream(IPAddress ip, Boolean unix)
+   at MySql.Data.Common.StreamCreator.GetStream(UInt32 timeout)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at DAOManager.AccountDAO..ctor(String conStr) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Data\DAO\AccountDAO.cs:line 23
+   at DAOManager.BaseDAO.Initialize(String constr) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Configuration\DAOManager.cs:line 101
+   at Communication.Logic.GlobalLogic.ServerStart(String str) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\GlobalLogic.cs:line 18
+   at Tera.GameServer.RunServer() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\GameServer.cs:line 107
+   at Tera.GameServer.Main() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\GameServer.cs:line 31
+01:54:20.9244 | Config: Network_Port NOT FOUND!!!
+01:54:20.9553 | Config: Network_MaxCon NOT FOUND!!!
+01:54:21.0143 | Config: Database host NOT FOUND!!!
+01:54:21.0364 | Config: Database name NOT FOUND!!!
+01:54:21.0593 | Config: Database user NOT FOUND!!!
+01:54:21.0804 | Config: Database pass NOT FOUND!!!
+01:54:21.1023 | Config: Database port NOT FOUND!!!
+01:54:23.4256 | Can't start server!
+EXCEPTION OCCURRED
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at MySql.Data.Common.StreamCreator.CreateSocketStream(IPAddress ip, Boolean unix)
+   at MySql.Data.Common.StreamCreator.GetStream(UInt32 timeout)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at Data.DAO.AccountDAO..ctor(String conStr) in e:\Private_Server_Tera\Tera_Emulator_Source_2117_old\GameServer\Data\DAO\AccountDAO.cs:line 22
+   at Data.DAO.DAOManager.Initialize(String constr) in e:\Private_Server_Tera\Tera_Emulator_Source_2117_old\GameServer\Data\DAO\DAOManager.cs:line 20
+   at Communication.Logic.GlobalLogic.ServerStart(String str) in e:\Private_Server_Tera\Tera_Emulator_Source_2117_old\GameServer\Communication\Logic\GlobalLogic.cs:line 18
+   at Tera.GameServer.RunServer() in e:\Private_Server_Tera\Tera_Emulator_Source_2117_old\GameServer\GameServer.cs:line 96
+   at Tera.GameServer.Main() in e:\Private_Server_Tera\Tera_Emulator_Source_2117_old\GameServer\GameServer.cs:line 27
+01:54:40.5487 | Config: Network_Port NOT FOUND!!!
+01:54:40.5596 | Config: Network_MaxCon NOT FOUND!!!
+01:54:40.5897 | Config: Database host NOT FOUND!!!
+01:54:40.5897 | Config: Database name NOT FOUND!!!
+01:54:40.5897 | Config: Database user NOT FOUND!!!
+01:54:40.5897 | Config: Database pass NOT FOUND!!!
+01:54:40.5897 | Config: Database port NOT FOUND!!!
+01:56:04.9585 | Can't start server!
+EXCEPTION OCCURRED
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at MySql.Data.Common.StreamCreator.CreateSocketStream(IPAddress ip, Boolean unix)
+   at MySql.Data.Common.StreamCreator.GetStream(UInt32 timeout)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at DAOManager.AccountDAO..ctor(String conStr) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Data\DAO\AccountDAO.cs:line 23
+   at DAOManager.BaseDAO.Initialize(String constr) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Configuration\DAOManager.cs:line 101
+   at Communication.Logic.GlobalLogic.ServerStart(String str) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\GlobalLogic.cs:line 18
+   at Tera.GameServer.RunServer() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\GameServer.cs:line 107
+   at Tera.GameServer.Main() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\GameServer.cs:line 31
+02:20:32.6612 | Can't start server!
+EXCEPTION OCCURRED
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at MySql.Data.Common.StreamCreator.CreateSocketStream(IPAddress ip, Boolean unix)
+   at MySql.Data.Common.StreamCreator.GetStream(UInt32 timeout)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at DAOManager.AccountDAO..ctor(String conStr) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Data\DAO\AccountDAO.cs:line 23
+   at DAOManager.BaseDAO.Initialize(String constr) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Configuration\DAOManager.cs:line 101
+   at Communication.Logic.GlobalLogic.ServerStart(String str) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\GlobalLogic.cs:line 18
+   at Tera.GameServer.RunServer() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\GameServer.cs:line 107
+   at Tera.GameServer.Main() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\GameServer.cs:line 31
+03:09:53.8328 | Can't start server!
+EXCEPTION OCCURRED
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at MySql.Data.Common.StreamCreator.CreateSocketStream(IPAddress ip, Boolean unix)
+   at MySql.Data.Common.StreamCreator.GetStream(UInt32 timeout)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at DAOManager.AccountDAO..ctor(String conStr) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Data\DAO\AccountDAO.cs:line 23
+   at DAOManager.BaseDAO.Initialize(String constr) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Configuration\DAOManager.cs:line 101
+   at Communication.Logic.GlobalLogic.ServerStart(String str) in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\Communication\Logic\GlobalLogic.cs:line 18
+   at Tera.GameServer.RunServer() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\GameServer.cs:line 107
+   at Tera.GameServer.Main() in e:\Private_Server_Tera\Tera_Emulator_Source_1725\GameServer\GameServer.cs:line 31
