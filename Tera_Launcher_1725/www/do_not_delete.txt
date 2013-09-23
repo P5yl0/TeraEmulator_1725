@@ -1,0 +1,6 @@
+tera revision: 1725 - web-files
+
+auth.php		>authorization function for launcher
+\server\ folder		>serverlist local(127.0.0.1)
+\serverlist\ folder	>my serverlist (my dyndns)
+
