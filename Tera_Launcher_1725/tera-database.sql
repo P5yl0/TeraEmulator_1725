@@ -77,7 +77,7 @@ DROP TABLE IF EXISTS `character_data`;
 CREATE TABLE `character_data` (
   `playerid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
-  `gender` enum('Male','Female','','') NOT NULL,
+  `gender` enum('Male','Female','') NOT NULL,
   `race` enum('Human','HighElf','Aman','Castanic','Popori','Elin','Baraka') NOT NULL,
   `playerclass` enum('Warrior','Lancer','Slayer','Berserker','Sorcerer','Archer','Priest','Mystic','Elementalist') NOT NULL,
   `data` longtext NOT NULL,
