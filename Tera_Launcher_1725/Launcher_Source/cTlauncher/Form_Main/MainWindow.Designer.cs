@@ -119,8 +119,10 @@
             // 
             this._inputboxPassword.Location = new System.Drawing.Point(480, 68);
             this._inputboxPassword.Name = "_inputboxPassword";
+            this._inputboxPassword.PasswordChar = '*'; 
             this._inputboxPassword.Size = new System.Drawing.Size(208, 20);
             this._inputboxPassword.TabIndex = 4;
+            this._inputboxPassword.UseSystemPasswordChar = true; 
             // 
             // _inputboxServerlist
             // 
