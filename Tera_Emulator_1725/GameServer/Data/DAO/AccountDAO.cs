@@ -51,10 +51,7 @@ namespace Data.DAO
                         acc.LastOnlineUtc = AccountReader.GetInt64(7);
                         acc.Coins = (int)AccountReader.GetInt32(8);
                         acc.Ip = AccountReader.GetString(9);
-                        acc.EmailVerify = AccountReader.GetString(10);
-                        acc.FirstName = AccountReader.GetString(11);
-                        acc.LastName = AccountReader.GetString(12);
-                        acc.PasswordRecovery = AccountReader.GetString(13);
+                        acc.UiSettings = Funcs.StringToByteArray(AccountReader.GetString(10));
 
                     }
                 }

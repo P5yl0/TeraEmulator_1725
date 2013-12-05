@@ -1,0 +1,200 @@
+﻿<MountList>
+  <Mount>
+    <MountId>1</MountId>
+    <Name>Bay Gelding</Name>
+    <SkillId>111111</SkillId>
+    <SpeedModificator>240</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>1</MountId>
+    <Name>Fast Bay Gelding</Name>
+    <SkillId>1</SkillId>
+    <SpeedModificator>270</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>3</MountId>
+    <Name>White Stallion</Name>
+    <SkillId>111114</SkillId>
+    <SpeedModificator>270</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>5</MountId>
+    <Name>Arcadian Dapple</Name>
+    <SkillId>111115</SkillId>
+    <SpeedModificator>240</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>5</MountId>
+    <Name>Fast Arcadian Dapple</Name>
+    <SkillId>111121</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>6</MountId>
+    <Name>Chestnut Gelding</Name>
+    <SkillId>111116</SkillId>
+    <SpeedModificator>240</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>10</MountId>
+    <Name>Black Stallion</Name>
+    <SkillId>111120</SkillId>
+    <SpeedModificator>290</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>11</MountId>
+    <Name>Honor Steed</Name>
+    <SkillId>111113</SkillId>
+    <SpeedModificator>290</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>11</MountId>
+    <Name>Honor Steed</Name>
+    <SkillId>111113</SkillId>
+    <SpeedModificator>290</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>26</MountId>
+    <Name>Velikan Gray</Name>
+    <SkillId>111117</SkillId>
+    <SpeedModificator>240</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>27</MountId>
+    <Name>Pinto</Name>
+    <SkillId>111118</SkillId>
+    <SpeedModificator>240</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>25</MountId>
+    <Name>Blue Roan</Name>
+    <SkillId>111119</SkillId>
+    <SpeedModificator>240</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>27</MountId>
+    <Name>Fast Pinto</Name>
+    <SkillId>111122</SkillId>
+    <SpeedModificator>270</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>12</MountId>
+    <Name>Night Mare</Name>
+    <SkillId>111123</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>1</MountId>
+    <Name>Federation Charger</Name>
+    <SkillId>111124</SkillId>
+    <SpeedModificator>240</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>1</MountId>
+    <Name>Veteran Federation Charger</Name>
+    <SkillId>111125</SkillId>
+    <SpeedModificator>270</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>3</MountId>
+    <Name>White Stallion</Name>
+    <SkillId>111126</SkillId>
+    <SpeedModificator>255</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>5</MountId>
+    <Name>Arcadian Dapple</Name>
+    <SkillId>111127</SkillId>
+    <SpeedModificator>255</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>25</MountId>
+    <Name>Blue Roan</Name>
+    <SkillId>111128</SkillId>
+    <SpeedModificator>255</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>26</MountId>
+    <Name>Velikan Gray</Name>
+    <SkillId>111129</SkillId>
+    <SpeedModificator>0</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>27</MountId>
+    <Name>Pinto</Name>
+    <SkillId>111130</SkillId>
+    <SpeedModificator>255</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>6</MountId>
+    <Name>Chestnut Gelding</Name>
+    <SkillId>111131</SkillId>
+    <SpeedModificator>255</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>29</MountId>
+    <Name>Regal Frostlion</Name>
+    <SkillId>111132</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>26</MountId>
+    <Name>Fast Velikan Gray</Name>
+    <SkillId>111190</SkillId>
+    <SpeedModificator>270</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>14</MountId>
+    <Name>Shadow Steed</Name>
+    <SkillId>111191</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>15</MountId>
+    <Name>Velik’s Festival Horse</Name>
+    <SkillId>111192</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>16</MountId>
+    <Name>Nexus Warhorse</Name>
+    <SkillId>111193</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>1</MountId>
+    <Name>Winter Mare</Name>
+    <SkillId>111194</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>18</MountId>
+    <Name>Zebra</Name>
+    <SkillId>111195</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>19</MountId>
+    <Name>Death Charger</Name>
+    <SkillId>111196</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>20</MountId>
+    <Name>Jeweled Lion</Name>
+    <SkillId>111197</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>21</MountId>
+    <Name>Tawny Huntress</Name>
+    <SkillId>111198</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+  <Mount>
+    <MountId>22</MountId>
+    <Name>Black Leopard</Name>
+    <SkillId>111199</SkillId>
+    <SpeedModificator>280</SpeedModificator>
+  </Mount>
+</MountList>

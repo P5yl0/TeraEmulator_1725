@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network_configuration>
+
+IpAdress of this Server
+<network_IP>0.0.0.0</network_IP>
+
+Port of this Server
+<network_Port>2101</network_Port>
+
+</network_configuration>

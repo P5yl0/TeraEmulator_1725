@@ -19,7 +19,6 @@ namespace Network
     public class Connection : IConnection
     {
         public static List<Connection> Connections = new List<Connection>();
-
         public static Thread SendAllThread = new Thread(SendAll);
 
         protected static void SendAll()
@@ -31,7 +30,9 @@ namespace Network
                     try
                     {
                         if (!Connections[i].Send())
+                        {
                             Connections.RemoveAt(i--);
+                        }
                     }
                     catch (Exception ex)
                     {

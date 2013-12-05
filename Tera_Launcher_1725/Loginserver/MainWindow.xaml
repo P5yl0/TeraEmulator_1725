@@ -1,0 +1,14 @@
+﻿<Window x:Class="TeraLoginServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="cTLoginServer" Height="200" Width="506" Icon="TERA.ico" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFD7CBFD">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Start_Button" Content="Start Server" HorizontalAlignment="Left" Margin="408,10,0,0" VerticalAlignment="Top" Width="80" Click="StartLoginServer_Click" Background="Black" Foreground="White" Height="32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="16" Text="received:"/>
+        <ScrollViewer x:Name="_scrollviewerStatus" HorizontalAlignment="Left" Height="108" Margin="10,53,0,0" VerticalAlignment="Top" Width="478" CanContentScroll="True" IsHitTestVisible="True"/>
+
+    </Grid>
+</Window>

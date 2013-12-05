@@ -30,15 +30,13 @@ namespace Tera.Services
             for (int i = 60; i != 0; i--)
             {
                 if (GameServer.TcpServer.Server.Clients.Count == 0)
-                    break;
+                { break; }
 
                 if (i < 10 || i % 10 == 0)
                 {
-                    PlayerService.Send(
-                        new SpSystemNotice("Attention! Server will be restarted after " + i + "sec!", i > 10 ? 5 : 1));
+                    PlayerService.Send(new SpSystemNotice("Attention! Server will be restarted after " + i + "sec!", i > 10 ? 5 : 1));
 
-                    PlayerService.Send(
-                        new SpChatMessage("Attention! Server will be restarted after " + i + "sec!", ChatType.System));
+                    PlayerService.Send(new SpChatMessage("Attention! Server will be restarted after " + i + "sec!", ChatType.System));
                 }
 
                 Console.WriteLine("!Server will be shutdown! Remaining seconds: " + i);

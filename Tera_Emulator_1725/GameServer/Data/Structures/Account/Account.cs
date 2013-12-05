@@ -29,10 +29,6 @@ namespace Data.Structures.Account
         public long LastOnlineUtc;
         public int Coins;
         public string Ip;
-        public string EmailVerify;
-        public string FirstName;
-        public string LastName;
-        public string PasswordRecovery;
 
 
         [ProtoBuf.ProtoMember(3)]

@@ -35,7 +35,7 @@ namespace Network
         public void Send(IConnection state)
         {
             if (state == null || !state.IsValid)
-                return;
+            { return; }
 
             if (!OpCodes.Send.ContainsKey(GetType()))
             {

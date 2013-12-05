@@ -1,19 +1,10 @@
-local:
-1. copy Tera_Launcher_1725/cTlauncher.rar to your Tera Folder & unpack
-2. import Tera_Launcher_1725/tera-database.sql to your SQL Database: "tera"
-3. run TeraEmulator_1725/build/GameServer.exe
-4. goto http://127.0.0.1 and register an account
-5. goto your Tera Game Folder and start cTstarter.exe
-6. have fun!
 
+1. copy Tera_Launcher_1725/Tera_Launcher_1725-localhost to your Tera Game Folder & unpack
 
-web:
-1. copy Tera_Launcher_1725/cTlauncher.rar to your Tera Folder & unpack
-2. import Tera_Launcher_1725/tera-database.sql to your SQL Database: "tera"
-3. run TeraEmulator_1725/build/GameServer.exe
-4. goto http://your.webserver.com and register an account
-5. goto your Tera Game Folder edit cTLauncher.ini > "127.0.0.1" lines to your.webserver.com
-6. Use a Hex Editor, open "cTgame.clf" search for "serverlist" (2 times)
-edit the "127.0.0.1/serverlist..." adress to your.webserver.com/serverlist...adress (max 46chars)
-7. goto your Tera Game Folder and start cTstarter.exe
-8. have fun!
+2. import Tera_Launcher_1725/sql-databases.rar unpack(tera-database-1725.sql) to your SQL Database: "tera"
+3. run TeraEmulator_1725/build/LoginServer.exe
+   run TeraEmulator_1725/build/GameServer.exe
+
+4. goto your Tera Game Folder and start cTlauncher.exe
+
+5. Register Account, Login & Play!

@@ -73,8 +73,7 @@ namespace Network
 
         public static SpSystemMessage NothingToRemove = new SpSystemMessage(new[] {"@48"});
 
-        public static SpSystemMessage YouCantAttachThisCrystalToYourCurrentlyEquippedGear =
-            new SpSystemMessage(new[] {"@49"});
+        public static SpSystemMessage YouCantAttachThisCrystalToYourCurrentlyEquippedGear =  new SpSystemMessage(new[] {"@49"});
 
         public static SpSystemMessage YouAlreadyHaveACrystalOfThatTypeEquipped = new SpSystemMessage(new[] {"@50"});
 
@@ -388,9 +387,7 @@ namespace Network
 
         /* MORE??? */
 
-        public static SpSystemMessage
-            GuildNamesMustBeASingleStringOfCharactersBetween3And15InLengthAndMustBeDifferentFromAnyExistingGuildName =
-                new SpSystemMessage(new[] {"@209"});
+        public static SpSystemMessage GuildNamesMustBeASingleStringOfCharactersBetween3And15InLengthAndMustBeDifferentFromAnyExistingGuildName = new SpSystemMessage(new[] {"@209"});
 
         /* MORE??? */
 
@@ -430,8 +427,7 @@ namespace Network
 
         public static SpSystemMessage GuildmasterRankCantBeChanged = new SpSystemMessage(new[] {"@280"});
 
-        public static SpSystemMessage EnterARankNameBetweenMinLengthAndMaxLengthLettersLong(string minLength,
-                                                                                            string maxLength)
+        public static SpSystemMessage EnterARankNameBetweenMinLengthAndMaxLengthLettersLong(string minLength, string maxLength)
         {
             return new SpSystemMessage(new[] {"@281", "MinLength", minLength, "MaxLength", maxLength});
         }
@@ -461,19 +457,14 @@ namespace Network
             return new SpSystemMessage(new[] {"@289", "Name", name});
         }
 
-        public static SpSystemMessage AcceptorAcceptedAccepteeToTheGuildWelcomeGuild(string acceptor, string acceptee,
-                                                                                     string guildName)
+        public static SpSystemMessage AcceptorAcceptedAccepteeToTheGuildWelcomeGuild(string acceptor, string acceptee, string guildName)
         {
-            return
-                new SpSystemMessage(new[] {"@290", "Acceptor", acceptor, "Acceptee", acceptee, "GuildName", guildName});
+            return new SpSystemMessage(new[] {"@290", "Acceptor", acceptor, "Acceptee", acceptee, "GuildName", guildName});
         }
 
-        public static SpSystemMessage AcceptorRejectedTheApplicationFromAccepteeToJoinGuild(string acceptor,
-                                                                                            string acceptee,
-                                                                                            string guildName)
+        public static SpSystemMessage AcceptorRejectedTheApplicationFromAccepteeToJoinGuild(string acceptor, string acceptee, string guildName)
         {
-            return
-                new SpSystemMessage(new[] {"@291", "Acceptor", acceptor, "Acceptee", acceptee, "GuildName", guildName});
+            return new SpSystemMessage(new[] {"@291", "Acceptor", acceptor, "Acceptee", acceptee, "GuildName", guildName});
         }
 
         public static SpSystemMessage GuildHasBeenCreated(string guildName)
@@ -548,8 +539,7 @@ namespace Network
 
         public static SpSystemMessage YoureTooFarAway = new SpSystemMessage(new[] {"@330"});
 
-        public static SpSystemMessage CantFindTargetOrTheyCouldNotReplyCheckSpellingAoTryAgainLater =
-            new SpSystemMessage(new[] {"@331"});
+        public static SpSystemMessage CantFindTargetOrTheyCouldNotReplyCheckSpellingAoTryAgainLater = new SpSystemMessage(new[] {"@331"});
 
         public static SpSystemMessage SelectADifferentCharacter = new SpSystemMessage(new[] {"@332"});
 
@@ -696,12 +686,7 @@ namespace Network
 
         public static SpSystemMessage YouReceiveItemXItemAmount(string playerName, string itemName, int itemAmount)
         {
-            return
-                new SpSystemMessage(new[]
-                                        {
-                                            "@379", "UserName", playerName, "ItemAmount", itemAmount.ToString(), "ItemName"
-                                            , itemName
-                                        });
+            return new SpSystemMessage(new[] { "@379", "UserName", playerName, "ItemAmount", itemAmount.ToString(), "ItemName" , itemName });
         }
 
         public static SpSystemMessage YouReceiveMoney(string money)
@@ -768,8 +753,7 @@ namespace Network
             return new SpSystemMessage(new[] {"@433", "UserName", userName});
         }
 
-        public static SpSystemMessage YouCanAnlySendThreeFriendInvitesToAnyOnePersonEachDay =
-            new SpSystemMessage(new[] {"@434"});
+        public static SpSystemMessage YouCanAnlySendThreeFriendInvitesToAnyOnePersonEachDay = new SpSystemMessage(new[] {"@434"});
 
         public static SpSystemMessage ThatPlayerBlockedYou = new SpSystemMessage(new[] {"@435"});
 
@@ -904,28 +888,19 @@ namespace Network
 
         /* MORE??? */
 
-        public static SpSystemMessage YouCanOnlyUseEngineOfMischiefWhileNearCampfire513 =
-            new SpSystemMessage(new[] {"@513"});
+        public static SpSystemMessage YouCanOnlyUseEngineOfMischiefWhileNearCampfire513 = new SpSystemMessage(new[] {"@513"});
 
-        public static SpSystemMessage YouCanOnlyUseEngineOfMischiefWhileNearCampfire514 =
-            new SpSystemMessage(new[] {"@514"});
+        public static SpSystemMessage YouCanOnlyUseEngineOfMischiefWhileNearCampfire514 = new SpSystemMessage(new[] {"@514"});
 
         public static SpSystemMessage YoureAlreadyUsingAnEngineOfMischief = new SpSystemMessage(new[] {"@515"});
 
         public static SpSystemMessage ThatItemCantBePutInTheEngineOfMischief = new SpSystemMessage(new[] {"@516"});
 
-        public static SpSystemMessage IfYourCampfireGoesOutTheEngineOfMischiefWillVanish =
-            new SpSystemMessage(new[] {"@517"});
+        public static SpSystemMessage IfYourCampfireGoesOutTheEngineOfMischiefWillVanish = new SpSystemMessage(new[] {"@517"});
 
-        public static SpSystemMessage UserPutItemInAnEnfineOfMischiefAndWon(string userName, string itemName,
-                                                                            string inAmount, string outAmount)
+        public static SpSystemMessage UserPutItemInAnEnfineOfMischiefAndWon(string userName, string itemName, string inAmount, string outAmount)
         {
-            return
-                new SpSystemMessage(new[]
-                                        {
-                                            "@518", "UserName", userName, "ItemName", itemName, "InAmount", inAmount,
-                                            "OutAmount", outAmount
-                                        });
+            return new SpSystemMessage(new[] { "@518", "UserName", userName, "ItemName", itemName, "InAmount", inAmount, "OutAmount", outAmount });
         }
 
         public static SpSystemMessage MoreMayhemThanMischief = new SpSystemMessage(new[] {"@519"});
@@ -1106,8 +1081,7 @@ namespace Network
 
         /* MORE??? */
 
-        public static SpSystemMessage YouCantSetUpShopHereYoureTooCloseToAnotherShop =
-            new SpSystemMessage(new[] {"@605"});
+        public static SpSystemMessage YouCantSetUpShopHereYoureTooCloseToAnotherShop = new SpSystemMessage(new[] {"@605"});
 
         public static SpSystemMessage YouCantSetUpShopHere = new SpSystemMessage(new[] {"@606"});
 
@@ -1126,8 +1100,7 @@ namespace Network
             return new SpSystemMessage(new[] {"@612", "ItemName", itemName, "Count", count});
         }
 
-        public static SpSystemMessage YourPetNeedsRepairAllItemsStockedInYourShopWillBeDestroyedIfYourPetBreaksDown =
-            new SpSystemMessage(new[] {"@613"});
+        public static SpSystemMessage YourPetNeedsRepairAllItemsStockedInYourShopWillBeDestroyedIfYourPetBreaksDown = new SpSystemMessage(new[] {"@613"});
 
         public static SpSystemMessage YouDontHaveEnoughGold614 = new SpSystemMessage(new[] {"@614"});
 
@@ -1170,8 +1143,7 @@ namespace Network
 
         public static SpSystemMessage TheresAnotherCampfireNearHere = new SpSystemMessage(new[] {"@629"});
 
-        public static SpSystemMessage TooManyItemsAreBeingUsedInThisCampfireTryAgainLater =
-            new SpSystemMessage(new[] {"@630"});
+        public static SpSystemMessage TooManyItemsAreBeingUsedInThisCampfireTryAgainLater = new SpSystemMessage(new[] {"@630"});
 
         public static SpSystemMessage CharmsCanOnlyBeUsedNearACampfire = new SpSystemMessage(new[] {"@631"});
 
@@ -1179,11 +1151,9 @@ namespace Network
 
         public static SpSystemMessage YouAreNoLongerRechargingStamina = new SpSystemMessage(new[] {"@633"});
 
-        public static SpSystemMessage YourStamnaIsNotFullToIncreaseYourStaminaStayNearCampfire =
-            new SpSystemMessage(new[] {"@634"});
+        public static SpSystemMessage YourStamnaIsNotFullToIncreaseYourStaminaStayNearCampfire = new SpSystemMessage(new[] {"@634"});
 
-        public static SpSystemMessage YourStaminaIsSpentYouShouldRechargeByACampfire =
-            new SpSystemMessage(new[] {"@635"});
+        public static SpSystemMessage YourStaminaIsSpentYouShouldRechargeByACampfire = new SpSystemMessage(new[] {"@635"});
 
         public static SpSystemMessage YouHaveAbundantStamina = new SpSystemMessage(new[] {"@636"});
 
@@ -1194,14 +1164,11 @@ namespace Network
 
         public static SpSystemMessage TheEngineOfMischiefCanAnlyBeUsedNearACampfire = new SpSystemMessage(new[] {"@638"});
 
-        public static SpSystemMessage YouCantUseAnEngineOfMerschiefWhileYpurInventoryIsFull =
-            new SpSystemMessage(new[] {"@639"});
+        public static SpSystemMessage YouCantUseAnEngineOfMerschiefWhileYpurInventoryIsFull = new SpSystemMessage(new[] {"@639"});
 
-        public static SpSystemMessage YouCanOnlyUseAnEngineOfMerschiefWhileNearACampfire =
-            new SpSystemMessage(new[] {"@640"});
+        public static SpSystemMessage YouCanOnlyUseAnEngineOfMerschiefWhileNearACampfire = new SpSystemMessage(new[] {"@640"});
 
-        public static SpSystemMessage IfYourCampfireGoesOutTheEngineOfMerschiefWillVanish =
-            new SpSystemMessage(new[] {"@641"});
+        public static SpSystemMessage IfYourCampfireGoesOutTheEngineOfMerschiefWillVanish = new SpSystemMessage(new[] {"@641"});
 
         public static SpSystemMessage ThisItemCannotBeUsedInThisBox = new SpSystemMessage(new[] {"@642"});
 
@@ -1222,8 +1189,7 @@ namespace Network
             return new SpSystemMessage(new[] { "@1370", "GuildName", guildName, "RemainCount", remainCount.ToString()});
         }
 
-        public static SpSystemMessage AskingYourPartyMembersToAproveCreationOfThisGuild =
-            new SpSystemMessage(new[] {"@1605"});
+        public static SpSystemMessage AskingYourPartyMembersToAproveCreationOfThisGuild = new SpSystemMessage(new[] {"@1605"});
 
         //TODO: ADD OTHERS
     }

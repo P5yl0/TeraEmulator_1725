@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network_configuration>
+
+IpAdress of this Server
+<network_IP>127.0.0.1</network_IP>
+
+Port of this Server
+<network_Port>11101</network_Port>
+
+MaxConnections allowed
+<network_MaxCon>100</network_MaxCon>
+
+</network_configuration>

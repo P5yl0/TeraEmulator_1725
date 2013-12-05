@@ -139,7 +139,7 @@ namespace Configuration
             try
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(@"config/network/networkConfig.xml");
+                doc.Load(@"config/network/gameserverNetworkConfig.xml");
                 XmlNode node = doc.SelectSingleNode("network_configuration/network_IP");
                 serverIp = node.InnerText;
             }
@@ -155,7 +155,7 @@ namespace Configuration
             try
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(@"config/network/networkConfig.xml");
+                doc.Load(@"config/network/gameserverNetworkConfig.xml");
                 XmlNode node = doc.SelectSingleNode("network_configuration/network_Port");
                 serverPort = Convert.ToInt32(node.InnerText);
             }
@@ -171,7 +171,7 @@ namespace Configuration
             try
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(@"config/network/networkConfig.xml");
+                doc.Load(@"config/network/gameserverNetworkConfig.xml");
                 XmlNode node = doc.SelectSingleNode("network_configuration/network_MaxCon");
                 serverMaxConnections = Convert.ToInt32(node.InnerText);
             }
