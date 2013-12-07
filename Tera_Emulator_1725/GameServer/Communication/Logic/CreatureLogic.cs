@@ -19,7 +19,9 @@ namespace Communication.Logic
 
             Player player = creature as Player;
             if (player != null)
+            {
                 FeedbackService.StatsUpdated(player);
+            }
         }
 
         public static void HpChanged(Creature creature, int diff, Creature attacker = null)

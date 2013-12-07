@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <PlayerExperience>
   <Stats>
+    <Level>0</Level>
+    <Experience>0</Experience>
+  </Stats>
+  <Stats>
     <Level>1</Level>
     <Experience>0</Experience>
   </Stats>

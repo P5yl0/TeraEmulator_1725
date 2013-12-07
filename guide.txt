@@ -1,5 +1,5 @@
 
-1. copy Tera_Launcher_1725/Tera_Launcher_1725-localhost to your Tera Game Folder & unpack
+1. copy Tera_Launcher_1725/Tera_Launcher_1725-localhost.rar to your Tera Game Folder & unpack
 
 2. import Tera_Launcher_1725/sql-databases.rar unpack(tera-database-1725.sql) to your SQL Database: "tera"
 3. run TeraEmulator_1725/build/LoginServer.exe

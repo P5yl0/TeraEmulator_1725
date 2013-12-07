@@ -38,8 +38,8 @@ namespace Data.Structures.Player
 
         public Dictionary<int, long> SkillCooldowns = new Dictionary<int, long>();
         
-        [ProtoBuf.ProtoMember(42)]
-        public Dictionary<int, long> MountSkills = new Dictionary<int, long>();
+        //[ProtoBuf.ProtoMember(42)]
+        //public Dictionary<int, long> MountSkills = new Dictionary<int, long>();
 
         public short MovementByAdminCommand { get; set; }
 

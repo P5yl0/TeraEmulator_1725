@@ -1,5 +1,11 @@
 ﻿<MountList>
   <Mount>
+    <MountId>0</MountId>
+    <Name>0</Name>
+    <SkillId>000000</SkillId>
+    <SpeedModificator>0</SpeedModificator>
+  </Mount>
+  <Mount>
     <MountId>1</MountId>
     <Name>Bay Gelding</Name>
     <SkillId>111111</SkillId>

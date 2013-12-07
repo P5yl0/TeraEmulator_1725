@@ -27,8 +27,13 @@ namespace Data
         public static string DataPath = Path.GetFullPath(Environment.CurrentDirectory + "//data//");
         public static string ConfigPath = Path.GetFullPath(Environment.CurrentDirectory + "//config//");
 
+        public static string mountsFile = Path.GetFullPath(DataPath + "//mounts.xml");
+        public static string playerExpFile = Path.GetFullPath(ConfigPath + "playerExperience.xml");
 
-        public static List<long> PlayerExperience = new List<long>();
+        public static List<long> PlayerExperience = new List<long>(); //xml done
+        public static Dictionary<int, Mount> Mounts = new Dictionary<int, Mount>(); //xml done
+
+
 
         public static List<long> NpcExperience = new List<long>();
 
@@ -80,7 +85,7 @@ namespace Data
 
         public static Dictionary<int, List<CampfireSpawnTemplate>> CampfireTemplates = new Dictionary<int, List<CampfireSpawnTemplate>>();
 
-        public static Dictionary<int, Mount> Mounts = new Dictionary<int, Mount>(); 
+
 
         public static Dictionary <int, WorldPosition> StaticTeleports = new Dictionary<int, WorldPosition>();
 
@@ -89,6 +94,7 @@ namespace Data
         protected static List<Loader> Loaders = new List<Loader>
                                                     {
                                                         LoadPlayerExperience,
+                                                        LoadMounts,
                                                         LoadStats,
                                                         LoadItemTemplates,
                                                         LoadSpawns,
@@ -113,7 +119,6 @@ namespace Data
                                                         LoadGatherSpawn,
                                                         LoadDcGatherSpawn,
                                                         LoadCampfires,
-                                                        LoadMounts,
                                                         LoadTeleports,
                                                         CalculateNpcExperience,
                                                     };
@@ -138,25 +143,59 @@ namespace Data
         //read from xml done !
         public static int LoadPlayerExperience()
         {
-            PlayerExperience = new List<long>();
             try
             {
                 XmlReader xmlFile;
-                xmlFile = XmlReader.Create(ConfigPath + "playerExperience.xml", new XmlReaderSettings());
+                xmlFile = XmlReader.Create(playerExpFile, new XmlReaderSettings());
                 DataSet ds = new DataSet();
                 ds.ReadXml(xmlFile);
 
-                int i = 0;
-                for (i = 0; i <= ds.Tables[0].Rows.Count - 1; i++)
+                for (int i = 0; i <= ds.Tables[0].Rows.Count; i++)
                 {
-                    PlayerExperience.Add(Convert.ToInt64(ds.Tables[0].Rows[i].ItemArray[1]));
+                    Int64 _PlayerExp = Convert.ToInt64(ds.Tables[0].Rows[i].ItemArray[1]);
+                    PlayerExperience.Add(_PlayerExp);
                 }
             }
             catch
             { }
-
             return PlayerExperience.Count;
         }
+        //read from xml done !
+        public static int LoadMounts()
+        {
+            try
+            {
+                XmlReader xmlFile;
+                xmlFile = XmlReader.Create(mountsFile, new XmlReaderSettings());
+                DataSet ds = new DataSet();
+                ds.ReadXml(xmlFile);
+
+                for (int i = 0; i <= ds.Tables[0].Rows.Count; i++)
+                {
+                    int _MountId = Convert.ToInt32(ds.Tables[0].Rows[i].ItemArray[0]);
+                    string _Name = Convert.ToString(ds.Tables[0].Rows[i].ItemArray[1]);
+                    int _SkillId = Convert.ToInt32(ds.Tables[0].Rows[i].ItemArray[2]);
+                    int _SpeedModificator = Convert.ToInt32(ds.Tables[0].Rows[i].ItemArray[3]);
+
+                    if (!Mounts.ContainsKey(_SkillId))
+                    {
+                        Mounts.Add(_SkillId, new Mount()
+                        {
+                            MountId = _MountId,
+                            Name = _Name,
+                            SkillId = _SkillId,
+                            SpeedModificator = _SpeedModificator,
+                        });
+                    }
+                }
+            }
+            catch
+            { }
+            return Mounts.Count;
+        }
+
+
+
 
         public static int LoadStats()
         {
@@ -199,14 +238,7 @@ namespace Data
             return StaticTeleports.Count;
         }
 
-        public static int LoadMounts()
-        {
-            using (FileStream fs = File.OpenRead(DataPath + "mounts.bin"))
-                foreach (Mount mount in Serializer.Deserialize<List<Mount>>(fs))
-                   Mounts.Add(mount.SkillId, mount);
 
-            return Mounts.Count;
-        }
 
         public static int LoadRecipes()
         {
