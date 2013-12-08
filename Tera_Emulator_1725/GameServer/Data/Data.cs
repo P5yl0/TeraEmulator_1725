@@ -19,6 +19,7 @@ using ProtoBuf;
 using Utils;
 using System.Xml;
 using System.Data;
+using Data.Enums.Craft;
 
 namespace Data
 {
@@ -28,10 +29,12 @@ namespace Data
         public static string ConfigPath = Path.GetFullPath(Environment.CurrentDirectory + "//config//");
 
         public static string mountsFile = Path.GetFullPath(DataPath + "//mounts.xml");
+        public static string recipesFile = Path.GetFullPath(DataPath + "//recipes.xml");
         public static string playerExpFile = Path.GetFullPath(ConfigPath + "playerExperience.xml");
 
         public static List<long> PlayerExperience = new List<long>(); //xml done
         public static Dictionary<int, Mount> Mounts = new Dictionary<int, Mount>(); //xml done
+        public static Dictionary<int, Recipe> Recipes = new Dictionary<int, Recipe>();
 
 
 
@@ -58,8 +61,6 @@ namespace Data
         public static Dictionary<int, List<WorldPosition>> BindPoints = new Dictionary<int, List<WorldPosition>>();
 
         public static Dictionary<int, List<Climb>> Climbs = new Dictionary<int, List<Climb>>();
-
-        public static Dictionary<int, Recipe> Recipes = new Dictionary<int, Recipe>();
 
         public static List<GeoLocation> GeoData = new List<GeoLocation>();
 
@@ -95,6 +96,8 @@ namespace Data
                                                     {
                                                         LoadPlayerExperience,
                                                         LoadMounts,
+                                                        LoadRecipes,
+
                                                         LoadStats,
                                                         LoadItemTemplates,
                                                         LoadSpawns,
@@ -107,7 +110,6 @@ namespace Data
                                                         LoadBindPoints,
                                                         LoadClimbs,
                                                         LoadGeoData,
-                                                        LoadRecipes,
                                                         LoadDefaultSkillSets,
                                                         LoadUserSkills,
                                                         LoadSkills,
@@ -194,7 +196,65 @@ namespace Data
             return Mounts.Count;
         }
 
+        public static int LoadRecipes()
+        {
+            Recipes = new Dictionary<int, Recipe>();
+            using (FileStream stream = File.OpenRead(DataPath + "recipes.bin"))
+            {
+                while (stream.Position < stream.Length)
+                {
+                    Recipe r = Serializer.DeserializeWithLengthPrefix<Recipe>(stream, PrefixStyle.Fixed32);
+                    Recipes.Add(r.RecipeId, r);
+                }
+            }
 
+            /*
+            try
+            {
+                XmlReader xmlFile;
+                xmlFile = XmlReader.Create(recipesFile, new XmlReaderSettings());
+                DataSet ds = new DataSet();
+                ds.ReadXml(xmlFile);
+
+                for (int i = 0; i <= ds.Tables[0].Rows.Count; i++)
+                {
+                    string _CraftStat = Convert.ToString(ds.Tables[0].Rows[i].ItemArray[0]);
+                    byte _CriticalChancePercent = Convert.ToByte(ds.Tables[0].Rows[i].ItemArray[1]);
+                    var _CriticalResultItem = (ds.Tables[0].Rows[i].ItemArray[2]);
+
+                    int _Level = Convert.ToInt32(ds.Tables[0].Rows[i].ItemArray[3]);
+                    string _Name = Convert.ToString(ds.Tables[0].Rows[i].ItemArray[4]);
+                    var _NeededItems = Convert.ToInt32(ds.Tables[0].Rows[i].ItemArray[5]);
+                    int _RecipeId = Convert.ToInt32(ds.Tables[0].Rows[i].ItemArray[6]);
+                    short _ReqMax = Convert.ToInt16(ds.Tables[0].Rows[i].ItemArray[7]);
+                    short _ReqMin = Convert.ToInt16(ds.Tables[0].Rows[i].ItemArray[8]);
+                    var _ResultItem = (ds.Tables[0].Rows[i].ItemArray[9]);
+                        
+                    if (!Recipes.ContainsKey(_RecipeId))
+                    {
+
+                        Recipes.Add(_RecipeId, new Recipe()
+                        {
+                            CraftStat = (CraftStat)Enum.Parse(typeof(CraftStat), _CraftStat),
+                            CriticalChancePercent = _CriticalChancePercent,
+                            //CriticalResultItem = KeyValuePair<int, int>,
+                            Level = _Level,
+                            Name = _Name,
+                            NeededItems = { },
+                            RecipeId = _RecipeId,
+                            ReqMax = _ReqMax,
+                            ReqMin = _ReqMin,
+                            //ResultItem = _ResultItem
+
+                        });
+                    }
+                }
+            }
+            catch
+            { }
+            */
+            return Recipes.Count;
+        }
 
 
         public static int LoadStats()
@@ -239,22 +299,6 @@ namespace Data
         }
 
 
-
-        public static int LoadRecipes()
-        {
-            Recipes = new Dictionary<int, Recipe>();
-
-            using (FileStream stream = File.OpenRead(DataPath + "recipes.bin"))
-            {
-                while (stream.Position < stream.Length)
-                {
-                    Recipe r = Serializer.DeserializeWithLengthPrefix<Recipe>(stream, PrefixStyle.Fixed32);
-                    Recipes.Add(r.RecipeId, r);
-                }
-            }
-
-            return Recipes.Count;
-        }
 
         public static int LoadItemTemplates()
         {
