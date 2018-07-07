@@ -1,5 +1,5 @@
-TeraEmulator_1725
-=================
+<b>TeraEmulator_1725</b></br>
+<b>==================</b></br>
 <b>Tera Online Emulator C# 4.5</b>
 </br>
 Client: Revision 1725 EU
